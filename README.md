@@ -18,3 +18,9 @@ Para ejecutar, en cada carpeta:
 - Booleans
 - Sets
 - Mapas
+- Variables
+- Constantes vs Finals
+- Operadores Aritméticos
+- Operadores de Asignación
+- Operadores condicionales
+- Operadores relacionales
