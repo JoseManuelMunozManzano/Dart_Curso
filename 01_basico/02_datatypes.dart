@@ -70,4 +70,19 @@ main() {
   // El uso de ! de esta forma sirve para indicar a Dart que confíe en nosotros,
   // aunque Dart no lo infiera, aquí la variable no va a tener un valor nulo.
   print(isNotActive!);
+
+  //? ============ Lists
+  // Las listas o arrays son grupos de elementos que tienen algo que ver entre sí.
+  // Son base 0.
+
+  // Evitar mezclar tipos de datos distintos (y el uso de var)
+  var villanosVar = ['Lex', 'Red Skull', 'Doom', 1, true, 2.3];
+
+  List<String> villanos = ['Lex', 'Red Skull', 'Doom'];
+  villanos[0] = 'Superman';
+
+  print(villanos);
+
+  // Forma antigua de trabajar con listados. Obsoleto
+  // List<String> villanosDeprecated = new List('Doom');
 }
