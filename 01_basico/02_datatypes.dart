@@ -48,4 +48,26 @@ main() {
   String apellido = 'Stark';
   String nombreCompleto = '$nombre $apellido';
   print(nombreCompleto);
+
+  //? ============ Booleans
+  // Si se acepta un nulo, un booleano puede tener hasta 3 valores.
+
+  // Como definirlo.
+  // Sin inicializar, var no es capaz de inferir el tipo de dato, siendo dynamic y su valor null.
+  // El tipo de dato dynamic indica que puede aceptar cualquier cosa.
+  // Hay que evitar hasta donde sea posible usar el tipo de dato dynamic y también el var.
+  // Hay ciertas excepciones al uso de dynamic, por ejemplos al hacer peticiones HTTP.
+  var isActiveVar;
+
+  bool isActive = true;
+  print(isActive);
+
+  // Negación de un booleano con !
+  // Cuidado porque el símbolo ! sirve para muchas cosas en Dart.
+  bool isNotActive = !isActive;
+  print(isNotActive);
+
+  // El uso de ! de esta forma sirve para indicar a Dart que confíe en nosotros,
+  // aunque Dart no lo infiera, aquí la variable no va a tener un valor nulo.
+  print(isNotActive!);
 }
