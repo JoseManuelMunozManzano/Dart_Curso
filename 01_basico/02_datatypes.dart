@@ -108,4 +108,39 @@ main() {
   // Eliminar duplicados de una lista. Se transforma a un Set y luego de nuevo a un List
   var villanosSet = villanos.toSet();
   print(villanosSet.toList());
+
+  //? ============ Maps (Diccionarios / Objetos Literales)
+  // Objetos con pares de valores: Una llave y un valor
+
+  // Se indica dynamic porque los valores pueden ser de más de un tipo.
+  // A la hora de definirlo, diferenciamos entre Set y Mapa porque un Set
+  // solo tiene valores y el Map tiene la llave y el valor.
+  Map<String, dynamic> ironman = {
+    'nombre': 'Tony Stark',
+    'poder': 'Inteligencia y el dinero',
+    'nivel': 9000,
+  };
+
+  print(ironman);
+
+  Map<int, dynamic> ironman2 = {
+    1: 'Tony Stark',
+    2: 'Inteligencia y el dinero',
+    3: 9000,
+  };
+
+  // Métodos de los mapas
+  // Obtener el valor de una llave
+  print(ironman['nivel']);
+
+  // Cómo sabemos si es un listado o es una llave de un mapa? Dejando el cursor encima
+  // De todas formas es raro ver llaves como enteros. Lo normal es que sean String.
+  print(ironman2[3]);
+
+  // Otra forma de definir mapas es creando un mapa vacío.
+  Map<String, dynamic> capitan = new Map();
+
+  // Ahora podemos agregar las llaves-valores que sean necesarias.
+  capitan.addAll({'nombre': 'Steve', 'poder': 'Supersoldado', 'nivel': 5000});
+  print(capitan);
 }
