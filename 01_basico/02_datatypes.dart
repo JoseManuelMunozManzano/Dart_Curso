@@ -81,8 +81,31 @@ main() {
   List<String> villanos = ['Lex', 'Red Skull', 'Doom'];
   villanos[0] = 'Superman';
 
+  // Añadir a la lista
+  villanos.add('Duende verde');
+  villanos.add('Duende verde');
+  villanos.add('Duende verde');
+  villanos.add('Duende verde');
+
   print(villanos);
 
   // Forma antigua de trabajar con listados. Obsoleto
   // List<String> villanosDeprecated = new List('Doom');
+
+  //? ============ Sets
+  // Muy parecidos a las Lists, pero con una gran diferencia: En un Set NO HAY ELEMENTOS DUPLICADOS
+
+  // Para definirlos se usan llaves {}
+  var villanosVar2 = {'Lex', 'Red Skull', 'Doom'};
+  Set<String> villanos2 = {'Lex', 'Red Skull', 'Doom'};
+
+  villanos2.add('Duende verde');
+  villanos2.add('Duende verde');
+  villanos2.add('Duende verde');
+  villanos2.add('Duende verde');
+  print(villanos2);
+
+  // Eliminar duplicados de una lista. Se transforma a un Set y luego de nuevo a un List
+  var villanosSet = villanos.toSet();
+  print(villanosSet.toList());
 }
