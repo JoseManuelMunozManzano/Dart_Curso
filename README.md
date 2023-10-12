@@ -40,3 +40,17 @@ Para ejecutar:
 - Do While
 - Break y Continue
 - Switch
+
+## 03_funciones
+
+Para ejecutar:
+
+```
+  dart <nombreprograma.dart>
+```
+
+- Funciones básicas
+- Argumentos
+- Argumentos por valor y referencia
+- Funciones Lambda o funciones de Flecha
+- Callbacks
