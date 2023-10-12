@@ -39,4 +39,27 @@ main() {
 
   // Esto es redundante y se ve como una mala práctica
   const List<String> personasConst3 = const ['Juan', 'Pedro', 'Fernando'];
+
+  // Desde la versión 2.12 de Dart tenemos también late
+  // Indica que vamos a declarar una variable sin inicializar, pero que cuando se utilice tendrá un valor.
+  // En este ejemplo se puede ver la diferencia entre final y late final.
+  // late se usa mucho en clases.
+  final double z;
+  late final double x;
+
+  if (c == 10) {
+    z = 20;
+  }
+  // final. Este print da error porque puede que z no se haya inicializado (si no pasa por el if)
+  // Error en tiempo de compilación.
+  // print(z);
+
+  if (c == 10) {
+    x = 20;
+  }
+
+  // late final. Esto funciona porque hemos indicado que x va a tener un valor así que supone que
+  // lo tendrá.
+  // Si no lo tiene fallará en tiempo de ejecución.
+  print(x);
 }
