@@ -1,3 +1,4 @@
+//! Argumentos posicionales
 // Si no se indica tipo de dato, mensaje tendrá el tipo de dato dynamic.
 // Pero es una muy buena práctica indicar siempre el tipo de dato, para que
 // el programador sepa con que trabaja la función.
@@ -31,6 +32,34 @@ void saludar4(String mensaje, [String? nombre, int? edad]) {
   print('$mensaje $nombre - $edad');
 }
 
+//! Argumentos por nombre
+// Ponemos todos los argumentos entre llaves e indicamos que son opcionales usando ?
+// o damos un valor por defecto.
+// Es buena práctica indicar los argumentos por nombre ordenados alfabéticamente.
+void saludar5({
+  String? mensaje,
+  String? nombre,
+  int veces = 10,
+}) {
+  print('Saludar5: $mensaje $nombre - $veces');
+}
+
+// Si necesitamos que uno de los argumentos por nombre me venga obligatoriamente, usaremos
+// la palabra reservada required (nuevo en Dart 2.12)
+void saludar6({
+  String? mensaje,
+  required String nombre,
+  int veces = 10,
+}) {
+  print('Saludar5: $mensaje $nombre - $veces');
+}
+
+//! Se puede hacer una composición entre argumentos posicional y argumentos por nombre.
+// Queremos que siempre nos envíen mensaje, pero no queremos usar required.
+void saludar7(String mensaje, {required String nombre, int veces = 10}) {
+  print('Saludar5: $mensaje $nombre - $veces');
+}
+
 void main(List<String> args) {
   // Hay 2 tipos de argumentos que se pueden mandar a las funciones:
   // Posicionales: Como el que tiene la función saludar.
@@ -51,4 +80,13 @@ void main(List<String> args) {
   saludar3('Hola', 'José Manuel', 45);
 
   saludar4('Hola', null, 45);
+
+  saludar5();
+
+  // Pulsar Cmd+. y aparecerán los argumentos por nombre requeridos
+  saludar6(veces: 20, nombre: 'Adriana');
+
+  // Primer argumento posicional. Es obligatorio
+  // Segundo y tercer argumentos son por nombre, pero veces es opcional y nombre es requerido.
+  saludar7('Saludos', veces: 20, nombre: 'Adriana');
 }
