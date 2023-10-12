@@ -4,7 +4,7 @@ Sigue el curso de Fernando Herrera: `https://cursos.devtalles.com/courses/dart-c
 
 ## 01_basico
 
-Para ejecutar, en cada carpeta:
+Para ejecutar:
 
 ```
   dart <nombreprograma.dart>
@@ -24,3 +24,19 @@ Para ejecutar, en cada carpeta:
 - Operadores de Asignación
 - Operadores condicionales
 - Operadores relacionales
+
+## 02_control
+
+Para ejecutar:
+
+```
+  dart <nombreprograma.dart>
+```
+
+- If y else
+- Ciclo For
+- For In
+- While
+- Do While
+- Break y Continue
+- Switch
