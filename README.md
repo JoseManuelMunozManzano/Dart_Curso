@@ -54,3 +54,20 @@ Para ejecutar:
 - Argumentos por valor y referencia
 - Funciones Lambda o funciones de Flecha
 - Callbacks
+
+## 04_tipos_nocomunes
+
+Para ejecutar:
+
+```
+  dart <nombreprograma.dart>
+```
+
+- Queues o Colas
+- Enumeraciones
+- Futures
+- Async y Await
+- CatchError
+- Streams
+- onError, onDone y cancelOnError
+- Broadcast
