@@ -71,3 +71,24 @@ Para ejecutar:
 - Streams
 - onError, onDone y cancelOnError
 - Broadcast
+
+## 05_clases
+
+Para ejecutar:
+
+```
+  dart <nombreprograma.dart>
+```
+
+- Estructura de una clase
+- Clases en archivos independientes
+- Propiedades públicas y privadas
+- Getters
+- Setters
+- Constructores básicos
+- Constructores con nombre
+- Propiedades finales
+- Constructores constantes
+- Constructores factory
+- Propiedades y métodos estáticos
+- Singleton
