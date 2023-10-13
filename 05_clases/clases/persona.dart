@@ -1,8 +1,10 @@
 class Persona {
-  // Campos o propiedades
+  // Campos o propiedades.
+  // Por defecto todas las propiedades y métodos de una clase son públicas.
+  // Para hacer una propiedad privada, poner un guión bajo antes del nombre: _bio
   String? nombre;
   int? edad;
-  String? bio;
+  String _bio = 'Hola, soy una propiedad privada';
 
   // Gets y Sets
   // Constructores
@@ -12,7 +14,7 @@ class Persona {
   // Puede ser una función de flecha.
   @override
   String toString() {
-    return '$nombre $edad $bio';
+    return '$nombre $edad $_bio';
 
     // Para hacer referencia a una propiedad de la clase se usa this.
     // Muy útil si recibimos como argumento del método una variable llamada nombre,

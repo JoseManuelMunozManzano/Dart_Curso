@@ -10,8 +10,8 @@ main() {
   // Optimización para indicar valores de las propiedades de la clase.
   persona
     ..nombre = 'José Manuel'
-    ..edad = 44
-    ..bio = 'Nació en España';
+    ..edad = 44;
+  // ..bio = 'Nació en España'; // Ya no se puede hacer porque bio es privado.
 
   // Una vez hecho el override al toString() en la clase Persona realmente no hace falta indicarlo aquí
   // porque está implícito.
