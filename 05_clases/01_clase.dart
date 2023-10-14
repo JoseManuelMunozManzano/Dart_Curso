@@ -5,12 +5,15 @@ main() {
   // La palabra new es opcional pero se recomienda indicarla.
   // En vez de indicar el tipo Persona en la parte izquierda, se puede indicar
   // final si no va a cambiar a lo que apunta persona.
-  final persona = new Persona();
+  //
+  // Se pueden enviar argumentos para inicializar los valores de nuestro objeto.
+  final persona = new Persona(edad: 44, nombre: 'José Manuel');
 
   // Optimización para indicar valores de las propiedades de la clase.
-  persona
-    ..nombre = 'José Manuel'
-    ..edad = 44;
+  // Lo normal es enviarlos en el constructor
+  // persona
+  //   ..nombre = 'José Manuel'
+  //   ..edad = 44;
   // ..bio = 'Nació en España'; // Ya no se puede hacer porque bio es privado.
 
   // Una vez hecho el override al toString() en la clase Persona realmente no hace falta indicarlo aquí

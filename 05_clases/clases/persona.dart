@@ -4,6 +4,7 @@ class Persona {
   // Para hacer una propiedad privada, poner un guión bajo antes del nombre: _bio
   String? nombre;
   int? edad;
+  // El constructor cambia el valor de esta propiedad aquí inicializada.
   String _bio = 'Hola, soy una propiedad privada';
 
   // Gets y Sets
@@ -30,6 +31,37 @@ class Persona {
   set bioFlecha(String texto) => _bio = texto;
 
   // Constructores
+  // Método que se llama cuando queremos crear una nueva instancia de esta clase.
+  // Por defecto siempre existe un constructor implícito, y siempre podemos definir
+  // otros constructores.
+  //
+  // El constructor por defecto tiene que tener el mismo nombre de la clase.
+  // Este constructor ya es válido.
+  //
+  // Persona();
+  //
+  // Ejemplo de constructor con argumentos posicionales obligatorios y con más operativa.
+  //
+  // Persona(int edad, String nombre) {
+  //   print('Constructor');
+
+  //   this.edad = edad;
+  //   this.nombre = nombre;
+
+  //   _bio = 'Hola desde el constructor';
+  // }
+
+  // Resumiendo el código del constructor.
+  // Notar que es solo para inicializar propiedades.
+  // Se pueden poner los argumentos como posicionales o con nombre opcionales.
+  //
+  //Persona(this.edad, {this.nombre = 'María'});
+  //
+  // Para hacer obligatorio uno de estos parámetros por nombre, en Flutter se usa
+  // el decorador @required, pero en Dart todavía no funciona.
+  // Por ahora no se puede establecer un parámetro por nombre como obligatorio.
+  // Solo poner valores por defecto.
+  Persona({this.edad = 42, this.nombre = 'Adriana'});
 
   // Métodos
   // Podemos sobreescribir alguna propiedad que tenga una clase, por ejemplo: toString()
