@@ -106,3 +106,17 @@ Para ejecutar:
 - Super Constructor
 - Override
 - Mixins
+
+## 07_docs
+
+Documentación: `https://dart.dev/`
+
+Guía de estilos: `https://dart.dev/effective-dart/style`
+
+Especificaciones: `https://dart.dev/guides/language/spec`
+
+- Métodos y propiedades de doubles
+- Métodos y propiedades de Strings
+- Métodos y propiedades de Listas
+- Métodos y propiedades de Mapas
+- Leer la documentación
