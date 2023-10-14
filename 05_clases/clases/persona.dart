@@ -63,6 +63,21 @@ class Persona {
   // Solo poner valores por defecto.
   Persona({this.edad = 42, this.nombre = 'Adriana'});
 
+  // No se puede realizar una sobrecarga de operador, es decir, no puedo crear
+  // otro constructor llamado Persona con otros argumentos porque solo puede haber
+  // un constructor sin nombre.
+  // Lo que si se usa es crear constructores con nombre.
+  // Se crean indicando el nombre de la clase, un punto y el nombre que queremos
+  // darle al constructor.
+  Persona.persona30(this.nombre) {
+    this.edad = 30;
+  }
+
+  Persona.persona40(String nombre) {
+    this.edad = 40;
+    this.nombre = nombre;
+  }
+
   // Métodos
   // Podemos sobreescribir alguna propiedad que tenga una clase, por ejemplo: toString()
   // Puede ser una función de flecha.

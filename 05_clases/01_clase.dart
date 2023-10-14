@@ -22,4 +22,8 @@ main() {
 
   persona.bio = 'Cambié el valor!';
   print(persona.bio);
+
+  // Usando un constructor con nombre
+  final persona2 = new Persona.persona30('Adriana');
+  print(persona2);
 }
