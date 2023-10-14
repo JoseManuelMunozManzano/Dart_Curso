@@ -92,3 +92,17 @@ Para ejecutar:
 - Constructores factory
 - Propiedades y métodos estáticos
 - Singleton
+
+## 06_clases_adv
+
+Para ejecutar:
+
+```
+  dart <nombreprograma.dart>
+```
+
+- Extends
+- Clases abstractas
+- Super Constructor
+- Override
+- Mixins
