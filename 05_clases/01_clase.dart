@@ -16,4 +16,7 @@ main() {
   // Una vez hecho el override al toString() en la clase Persona realmente no hace falta indicarlo aquí
   // porque está implícito.
   print(persona);
+
+  persona.bio = 'Cambié el valor!';
+  print(persona.bio);
 }
