@@ -10,6 +10,7 @@ main() {
   final persona = new Persona(edad: 44, nombre: 'José Manuel');
 
   // Optimización para indicar valores de las propiedades de la clase.
+  // Se usa el operador de cascada.
   // Lo normal es enviarlos en el constructor
   // persona
   //   ..nombre = 'José Manuel'
