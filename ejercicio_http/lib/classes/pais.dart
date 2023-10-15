@@ -4,9 +4,9 @@
 
 import 'dart:convert';
 
-import 'package:ejercicio_http/classes/currencies.dart';
-import 'package:ejercicio_http/classes/flags.dart';
-import 'package:ejercicio_http/classes/languages.dart';
+import 'package:ejercicio_http/classes/currency.dart';
+import 'package:ejercicio_http/classes/flag.dart';
+import 'package:ejercicio_http/classes/language.dart';
 import 'package:ejercicio_http/classes/name.dart';
 
 List<Pais> paisFromJson(String str) =>
@@ -24,17 +24,17 @@ class Pais {
   bool independent;
   String status;
   bool unMember;
-  Currencies currencies;
+  Currency currencies;
   Idd idd;
   List<String> capital;
   List<String> altSpellings;
   String region;
   String subregion;
-  Languages languages;
+  Language languages;
   Map<String, Translation> translations;
   List<double> latlng;
   bool landlocked;
-  int area;
+  double area;
   Demonyms demonyms;
   String flag;
   Maps maps;
@@ -42,7 +42,7 @@ class Pais {
   Car car;
   List<String> timezones;
   List<String> continents;
-  Flags flags;
+  Flag flags;
   CoatOfArms coatOfArms;
   String startOfWeek;
   CapitalInfo capitalInfo;
@@ -99,13 +99,13 @@ class Pais {
         independent: json["independent"],
         status: json["status"],
         unMember: json["unMember"],
-        currencies: Currencies.fromJson(json["currencies"]),
+        currencies: Currency.fromJson(json["currencies"]),
         idd: Idd.fromJson(json["idd"]),
         capital: List<String>.from(json["capital"].map((x) => x)),
         altSpellings: List<String>.from(json["altSpellings"].map((x) => x)),
         region: json["region"],
         subregion: json["subregion"],
-        languages: Languages.fromJson(json["languages"]),
+        languages: Language.fromJson(json["languages"]),
         translations: Map.from(json["translations"]).map((k, v) =>
             MapEntry<String, Translation>(k, Translation.fromJson(v))),
         latlng: List<double>.from(json["latlng"].map((x) => x?.toDouble())),
@@ -118,7 +118,7 @@ class Pais {
         car: Car.fromJson(json["car"]),
         timezones: List<String>.from(json["timezones"].map((x) => x)),
         continents: List<String>.from(json["continents"].map((x) => x)),
-        flags: Flags.fromJson(json["flags"]),
+        flags: Flag.fromJson(json["flags"]),
         coatOfArms: CoatOfArms.fromJson(json["coatOfArms"]),
         startOfWeek: json["startOfWeek"],
         capitalInfo: CapitalInfo.fromJson(json["capitalInfo"]),
@@ -230,26 +230,6 @@ class CoatOfArms {
       };
 }
 
-class Cop {
-  String name;
-  String symbol;
-
-  Cop({
-    required this.name,
-    required this.symbol,
-  });
-
-  factory Cop.fromJson(Map<String, dynamic> json) => Cop(
-        name: json["name"],
-        symbol: json["symbol"],
-      );
-
-  Map<String, dynamic> toJson() => {
-        "name": name,
-        "symbol": symbol,
-      };
-}
-
 class Demonyms {
   Eng eng;
   Eng fra;
@@ -343,26 +323,6 @@ class Maps {
   Map<String, dynamic> toJson() => {
         "googleMaps": googleMaps,
         "openStreetMaps": openStreetMaps,
-      };
-}
-
-class NativeName {
-  Translation? fra;
-  Translation? spa;
-
-  NativeName({
-    this.fra,
-    this.spa,
-  });
-
-  factory NativeName.fromJson(Map<String, dynamic> json) => NativeName(
-        fra: json["fra"] == null ? null : Translation.fromJson(json["fra"]),
-        spa: json["spa"] == null ? null : Translation.fromJson(json["spa"]),
-      );
-
-  Map<String, dynamic> toJson() => {
-        "fra": fra?.toJson(),
-        "spa": spa?.toJson(),
       };
 }
 

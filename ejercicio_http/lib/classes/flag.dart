@@ -4,22 +4,22 @@
 
 import 'dart:convert';
 
-Flags flagsFromJson(String str) => Flags.fromJson(json.decode(str));
+Flag flagsFromJson(String str) => Flag.fromJson(json.decode(str));
 
-String flagsToJson(Flags data) => json.encode(data.toJson());
+String flagsToJson(Flag data) => json.encode(data.toJson());
 
-class Flags {
+class Flag {
   String png;
   String svg;
   String alt;
 
-  Flags({
+  Flag({
     required this.png,
     required this.svg,
     required this.alt,
   });
 
-  factory Flags.fromJson(Map<String, dynamic> json) => Flags(
+  factory Flag.fromJson(Map<String, dynamic> json) => Flag(
         png: json["png"],
         svg: json["svg"],
         alt: json["alt"],

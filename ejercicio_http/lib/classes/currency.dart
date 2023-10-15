@@ -4,19 +4,18 @@
 
 import 'dart:convert';
 
-Currencies currenciesFromJson(String str) =>
-    Currencies.fromJson(json.decode(str));
+Currency currenciesFromJson(String str) => Currency.fromJson(json.decode(str));
 
-String currenciesToJson(Currencies data) => json.encode(data.toJson());
+String currenciesToJson(Currency data) => json.encode(data.toJson());
 
-class Currencies {
+class Currency {
   Cop cop;
 
-  Currencies({
+  Currency({
     required this.cop,
   });
 
-  factory Currencies.fromJson(Map<String, dynamic> json) => Currencies(
+  factory Currency.fromJson(Map<String, dynamic> json) => Currency(
         cop: Cop.fromJson(json["COP"]),
       );
 

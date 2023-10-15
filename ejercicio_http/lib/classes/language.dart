@@ -4,18 +4,18 @@
 
 import 'dart:convert';
 
-Languages languagesFromJson(String str) => Languages.fromJson(json.decode(str));
+Language languagesFromJson(String str) => Language.fromJson(json.decode(str));
 
-String languagesToJson(Languages data) => json.encode(data.toJson());
+String languagesToJson(Language data) => json.encode(data.toJson());
 
-class Languages {
+class Language {
   String spa;
 
-  Languages({
+  Language({
     required this.spa,
   });
 
-  factory Languages.fromJson(Map<String, dynamic> json) => Languages(
+  factory Language.fromJson(Map<String, dynamic> json) => Language(
         spa: json["spa"],
       );
 
