@@ -151,3 +151,7 @@ Para ejecutar:
 - Paquete Http
 - Mapear datos de respuesta
 - Optimizaciones
+
+## ejercicio_http
+
+Es un ejercicio cuyas instrucciones pueden verse en su propio archivo README.md
