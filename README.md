@@ -123,6 +123,10 @@ Especificaciones: `https://dart.dev/guides/language/spec`
 
 ## paquetes
 
+Repositorio Oficial de Paquetes de Dart/Flutter: `https://pub.dev/`
+
+Testings de APIs: `https://reqres.in/`
+
 Proyecto creado en VSCode con el plugin de Dart.
 
 ```
@@ -130,6 +134,8 @@ Proyecto creado en VSCode con el plugin de Dart.
   Dart: New Project
   Console Application
 ```
+
+Añadir paquete http: `dart pub add http`
 
 Para ejecutar:
 
