@@ -120,3 +120,26 @@ Especificaciones: `https://dart.dev/guides/language/spec`
 - Métodos y propiedades de Listas
 - Métodos y propiedades de Mapas
 - Leer la documentación
+
+## paquetes
+
+Proyecto creado en VSCode con el plugin de Dart.
+
+```
+  Cmd+Shift+P
+  Dart: New Project
+  Console Application
+```
+
+Para ejecutar:
+
+```
+  dart bin/paquetes.dart
+```
+
+- Paquetes
+- Estructura de proyectos
+- Qué subir a un repositorio
+- Paquete Http
+- Mapear datos de respuesta
+- Optimizaciones
