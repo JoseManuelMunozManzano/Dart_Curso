@@ -31,6 +31,21 @@ main() {
 
   // Borrar pares de valores que cumplan cierta condición. Barre todos los valores.
   // El callback devuelve true si el par de valores se borra o false si no se borra.
-  persona.removeWhere((key, value) => key != 'nombre');
+  // Descomentar para probar, pero comentar luego para tener más datos de prueba.
+  //! persona.removeWhere((key, value) => key != 'nombre');
   print('removeWhere: $persona');
+
+  // forEach sirve para barrer los pares de valores y realizar operaciones sobre
+  // cada par de valor. Devuelve void.
+  persona.forEach((key, value) {
+    print('key: $key    value: $value');
+  });
+
+  // Si quisiéramos retornar un nuevo mapa con alguna mutación en alguna/s propiedad/es
+  // el forEach no nos sirve porque regresa void.
+  // Se utiliza el método map, que regresa una nueva instancia de map con las modificaciones.
+  // No modifica el mapa original.
+  final nuevoMapa = persona
+      .map((key, value) => MapEntry(key, value.toString().toUpperCase()));
+  print('persona map: $nuevoMapa');
 }
