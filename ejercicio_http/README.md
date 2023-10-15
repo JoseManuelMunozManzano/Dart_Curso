@@ -2,7 +2,7 @@
 
 Realizar una petición HTTP hacia este API-Endpoint y mostrar información en consola utilizando clases personalizadas
 como lo vimos en clase.
-https://restcountries.com/v3.1/name/col
+https://restcountries.com/v3.1/name/colombia
 
 El cual es parte del sitio web de restcountries.eu
 https://restcountries.com/#api-endpoints
@@ -20,6 +20,7 @@ https://app.quicktype.io/
 
 # Debug console:
 
+===========================
 Pais: Colombia
 Población: 48759958
 Fronteras:
