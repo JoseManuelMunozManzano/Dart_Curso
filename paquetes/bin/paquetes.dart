@@ -13,6 +13,13 @@ import 'package:paquetes/paquetes.dart' as paquetes;
 void main(List<String> arguments) {
   final url = Uri.parse('https://reqres.in/api/users?page=2');
   http.get(url).then((res) {
-    print(res);
+    // Extraer y utilizar el body
+    // Necesito convertirlo, usando el paquete dart:convert
+    // Sabemos que un json al final es un mapa, así que aunque veamos dynamic, es un mapa.
+    final body = jsonDecode(res.body);
+    print(body);
+    print('page: ${body['page']}');
+    print('per_page: ${body['per_page']}');
+    print('id del tercer elemento: ${body['data'][2]['id']}');
   });
 }
