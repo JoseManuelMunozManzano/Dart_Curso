@@ -137,6 +137,8 @@ Proyecto creado en VSCode con el plugin de Dart.
 
 Añadir paquete http: `dart pub add http`
 
+Para generar código Dart: `https://app.quicktype.io/`
+
 Para ejecutar:
 
 ```
