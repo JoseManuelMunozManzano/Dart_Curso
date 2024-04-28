@@ -2,6 +2,10 @@
 
 Sigue el curso de Fernando Herrera: `https://cursos.devtalles.com/courses/dart-cero-hasta-detalles?coupon=learn-01`
 
+## Documentación
+
+Ver la carpeta documentacion donde pueden encontrarse dos archivos pdf. Uno son los slides del curso y el otro es un pdf de atajos de Dart.
+
 ## 01_basico
 
 Para ejecutar:
